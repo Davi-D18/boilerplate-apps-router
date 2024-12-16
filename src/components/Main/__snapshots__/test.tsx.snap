@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Main /> should render the heading 1`] = `
-<h1>
-  React Avançado
-</h1>
+<main
+  class="sc-blHHSb bZInSn"
+>
+  <h1>
+    React Avançado
+  </h1>
+</main>
 `;
