@@ -2,6 +2,7 @@ import StyledComponentsRegistry from '@/lib/registry'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import { Provider } from './provider'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -25,9 +26,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <Provider>{children}</Provider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
