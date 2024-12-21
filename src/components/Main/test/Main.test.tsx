@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom' // Importar o jest-dom
 import { render, screen } from '@testing-library/react'
-import Main from './Main'
+import { Main } from '../Main'
+
 describe('<Main />', () => {
   it('should render the heading', () => {
     // renderiza o component

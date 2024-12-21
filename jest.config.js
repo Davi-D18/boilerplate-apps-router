@@ -6,13 +6,17 @@ module.exports = {
     'src/**/*.ts(x)?',
     '!src/app/**',
     '!src/lib/registry.tsx**',
+    '!src/components/**/*.stories.tsx',
     '!src/types/**',
     '!src/styles/**'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+    '^.+\\.(js|jsx|ts|tsx|test\\.tsx)$': [
+      'babel-jest',
+      { presets: ['next/babel'] }
+    ]
   },
   moduleNameMapper: {
     '^styled-components':
